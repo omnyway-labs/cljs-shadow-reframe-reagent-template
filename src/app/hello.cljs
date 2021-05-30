@@ -27,4 +27,6 @@
    [:p "Hello, cljs-shadow-reframe-reagent is running!"]
    [:p "Here's an example of using a component with state:"]
    [click-counter click-count]
+
+   [:p "Here's an example of using a component with re-frame app-db state:"]
    [click-rf-counter]])

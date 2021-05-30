@@ -5,8 +5,8 @@
     "scripts": {
         "sc": "shadow-cljs",
         "server": "shadow-cljs stop && shadow-cljs start",
-        "start": "shadow-cljs watch app",
-        "build": "yarn clean && shadow-cljs release app",
+        "start": "shadow-cljs -A:dev watch app",
+        "build": "yarn clean && shadow-cljs -a:prod release app",
         "report": "shadow-cljs run shadow.cljs.build-report app report.html",
         "lint": "clj-kondo --lint src",
         "format": "zprint-clj --hang -i \"./src/**/*.{clj,cljs,cljc,edn}\" -o ./ && zprint-clj -i \"./*.edn\" -o ./"
@@ -17,6 +17,7 @@
         "zprint-clj": "~0.8.0"
     },
     "dependencies": {
+        "highlight.js": "10.7.1",
         "react": "~17.0.1",
         "react-dom": "~17.0.1"
     }
