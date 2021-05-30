@@ -1,21 +1,21 @@
 {:deps   true
  :nrepl  {:port 3333}
- :dev-http {3000 ["resources/public" "resources/public/js/compiled"]}
  :builds {:app
           {:target     :browser
            :output-dir "resources/public/js/compiled"
            :asset-path "/js/compiled"
            :modules    {:main {:init-fn app.core/main}}
+           :compiler-options
+           {:closure-defines {re-frame.trace.trace_enabled? true
+                              day8.re-frame.tracing.trace-enabled? true}}
            :devtools
-           {:preloads [devtools.preload
+           {:http-root "resources/public"
+            :http-port 3000
+            :preloads [devtools.preload
                        day8.re-frame-10x.preload]}
-           :dev
-           {:compiler-options
-            {:closure-defines {re-frame.trace.trace_enabled? true
-                               day8.re-frame.tracing.trace-enabled? true}}}}
-          :release    {:compiler-options
-                       {:closure-defines
-                        {goog.debug.LOGGING_ENABLED           true
-                         re-frame.trace.trace-enabled?        false
-                         day8.re-frame.tracing.trace-enabled? false}}
-                       :output-dir "dist/js/compiled"}}}
+           :release    {:compiler-options
+                        {:closure-defines
+                         {goog.debug.LOGGING_ENABLED           true
+                          re-frame.trace.trace-enabled?        false
+                          day8.re-frame.tracing.trace-enabled? false}}
+                        :output-dir "dist/js/compiled"}}}}

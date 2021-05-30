@@ -1,6 +1,6 @@
 ## Template for Clojurescript Reframe / Reagent App
 
-You can `Use this template` this as a starting point for simple re-frame / reagent
+You can use this template this as a starting point for re-frame / reagent
 applications
 
 ## Available Scripts
@@ -16,12 +16,28 @@ The page will reload if you make edits.
 The app uses [Reagent](https://reagent-project.github.io), a minimalistic interface between ClojureScript and React.<br>
 You can use existing npm React components directly via a [interop call](http://reagent-project.github.io/docs/master/InteropWithReact.html#creating-reagent-components-from-react-components).
 
-Builds use [Shadow CLJS](https://github.com/thheller/shadow-cljs) for maximum compatibility with NPM libraries. You'll need a [Java SDK](https://adoptopenjdk.net/) (Version 8+, Hotspot) to use it. <br>
-You can [import npm libraries](https://shadow-cljs.github.io/docs/UsersGuide.html#js-deps) using Shadow CLJS. See the [user manual](https://shadow-cljs.github.io/docs/UsersGuide.html) for more information.
+It  uses [Re-Frame](http://day8.github.io/re-frame/) for state management
+
+The [re-frame-10x](https://github.com/day8/re-frame-10x) debugging dashboard for re-frame is installed by default for dev.
+`Ctl-h` will hide or show the dashboard.
+
+Also included is the Omnyway open source library
+[refn](https://github.com/omnyway-labs/refn) that adds some syntactic wrappers
+for defining and subscribing re-frame events. It also adds mechanisms for using
+the re-frame app-db for caching large resultsets from db accesses.
+
+Builds use [Shadow CLJS](https://github.com/thheller/shadow-cljs) for maximum
+compatibility with NPM libraries. You'll need a [Java
+SDK](https://adoptopenjdk.net/) (Version 8+, Hotspot) to use it. <br> You can
+[import npm
+libraries](https://shadow-cljs.github.io/docs/UsersGuide.html#js-deps) using
+Shadow CLJS. See the [user
+manual](https://shadow-cljs.github.io/docs/UsersGuide.html) for more
+information.
 
 ### `yarn build`
 
-Builds the app for production to the `public` folder.<br>
+Builds the app for production to the `dist` folder.<br>
 It correctly bundles all code and optimizes the build for the best performance.
 
 Your app is ready to be deployed!
@@ -43,18 +59,6 @@ Consider [code-splitting](https://code.thheller.com/blog/shadow-cljs/2019/03/03/
 
 Starts a Shadow CLJS background server.<br>
 This will speed up starting time for other commands that use Shadow CLJS.
-
-## Useful resources
-
-Clojurians Slack http://clojurians.net/.
-
-CLJS FAQ (for JavaScript developers) https://clojurescript.org/guides/faq-js.
-
-Official CLJS API https://cljs.github.io/api/.
-
-Quick reference https://cljs.info/cheatsheet/.
-
-Offline searchable docs https://devdocs.io/.
 
 ## License
 
