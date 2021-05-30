@@ -1,0 +1,10 @@
+node_modules
+resources/public/js/compiled
+dist/
+out
+.shadow-cljs
+.nrepl-port
+.clj-kondo/.cache
+yarn-error.log
+report.html
+.cpcache/
